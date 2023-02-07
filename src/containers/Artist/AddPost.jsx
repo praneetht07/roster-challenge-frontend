@@ -22,7 +22,7 @@ function AddPost({ paramsRef }) {
       paramsRef?.current?.row &&
       paramsRef?.current?.row?.artist
     ) {
-      fetch("http://localhost:3010/artist/update/" + payload?.artist, {
+      fetch("https://roster-challenge-backend-production.up.railway.app/artist/update/" + payload?.artist, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -46,7 +46,7 @@ function AddPost({ paramsRef }) {
           }
         });
     } else {
-      fetch("http://localhost:3010/artist/add", {
+      fetch("https://roster-challenge-backend-production.up.railway.app/artist/add", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

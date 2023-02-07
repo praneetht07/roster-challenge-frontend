@@ -59,7 +59,7 @@ const ArtistList = () => {
     }
     setIsSubmitting(true);
     fetch(
-      "http://localhost:3010/artist/delete/" + rowRef?.current?.row?.artist,
+      "https://roster-challenge-backend-production.up.railway.app/artist/delete/" + rowRef?.current?.row?.artist,
       {
         method: "DELETE",
       }
@@ -132,7 +132,7 @@ const ArtistList = () => {
       status: !params?.row.status,
     };
 
-    fetch("http://localhost:3010/artist/update/" + payload?.artist, {
+    fetch("https://roster-challenge-backend-production.up.railway.app/artist/update/" + payload?.artist, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

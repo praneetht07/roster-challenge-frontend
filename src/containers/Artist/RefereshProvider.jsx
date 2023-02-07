@@ -14,7 +14,7 @@ export default function RefereshProvider({ children }) {
   const [listRes, setListRes] = useState([]);
 
   const GetListAction = useCallback(() => {
-    fetch("http://localhost:3010/artist/list")
+    fetch("https://roster-challenge-backend-production.up.railway.app/artist/list")
       .then((res) => {
         return res.json();
       })
